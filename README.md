@@ -1,7 +1,27 @@
 
 PyTorch implementation of paper [Issue Links Retrieval for New Issues in Issue Tracking Systems]([NLDB2024]) accepted by NLDB 2024.
 # Issue Links Retrieval for New Issues in Issue Tracking Systems
-
+Issue Tracking Systems (ITSs) are used to manage software issues, 
+including  `feature requests` and `bug` reports. 
+Issues are often interconnected by labelled links 
+to show the relationships between issues. Recent studies 
+in duplicate bug report retrieval (DBRR) aim to retrieve 
+relevant duplicate bug reports o for a query bug report 
+s  to form duplicate pairs (s, o). However, the DBRR 
+task has its limitations: (1) only focuses on the issues 
+with the `bug` type and overlooks other issue types, e.g., 
+`task` and `improvement`;  (2) only issues with respect to the 
+`duplicate` link type are retrieved, whereas a query s may have
+other link types, e.g., `relates` and `depends on`, 
+with candidate issues o. This paper goes beyond the 
+DBRR task and proposes a new task of issue link retrieval
+(ILR) for any issue types and link types. For a given query s,
+the ILR task will locate all relevant tail issues o with respect 
+to a given link type r to build issue links (s, r, o). 
+This paper presents novel methods using pre-trained language models (e.g., GPT-2) 
+to embed issue links for computing probability scores to retrieve issue links.
+Our methods are evaluated on four datasets, demonstrating high effectiveness 
+in issue link retrieval.
 
 ### Install python virtual environment
 
@@ -57,7 +77,7 @@ python  relation_tail_prediciton.py    --task_name kg    --do_relation_tail_pred
 ### Data
 Download data from [here](https://qubstudentcloud-my.sharepoint.com/:f:/g/personal/40305887_ads_qub_ac_uk/EoN0DtgpNXdJnvPPpwY6P3UBYd2dh-ViXkwTigkpelsWxg?e=EOC3Fj)
 ### Contact:
-This paper has been accepted by the The 29th International Conference on Natural Language & Information Systems (NLDB 2024). The published version can be viewed by this link [](will give). If you use any code from our repo in your paper, pls cite:
+This paper has been accepted by the 29th International Conference on Natural Language & Information Systems (NLDB 2024). The published version can be viewed by this link [](will give). If you use any code from our repo in your paper, pls cite:
 ```buildoutcfg
 @inproceedings{hu2024issue,
   title={Issue Links Retrieval for New Issues in Issue Tracking Systems},
